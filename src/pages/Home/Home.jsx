@@ -7,6 +7,9 @@ function Home() {
     return (
         <main>
             <p>Home</p>
+            <Banner
+                img={homeImg}
+            />
         </main>
     )
 }

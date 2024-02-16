@@ -1,15 +1,20 @@
 import "./navbar.css";
+import logo from "../../assets/logo/logo.svg";
 
-const Navbar = ({ img, alt, }) => {
+const Navbar = () => {
     return (
-        <header>
-            <figure>
-                <img src={img} alt={alt} className="banner-img" />
-                <figcaption> </figcaption>
-            </figure>
-        </header>
+        <nav>
+            <img src={logo} alt="Logo de Kasa" className="logo" />
+            <ul>
+                <li>
+                    Accueil
+                </li>
+                <li>
+                    A Propos
+                </li>
+            </ul>
+        </nav>
     );
 };
-
 
 export default Navbar;
