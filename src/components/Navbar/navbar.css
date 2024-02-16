@@ -1,0 +1,32 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 50px;
+
+  img {
+    width: 200px;
+  }
+
+  ul {
+    display: flex;
+    gap: 30px;
+  }
+
+  li {
+    text-transform: uppercase;
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 768px) {
+  nav {
+    li {
+      text-transform: capitalize;
+    }
+  }
+}
