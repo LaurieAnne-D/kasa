@@ -2,19 +2,20 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 30px 50px;
+  margin-bottom: 27px;
 
   img {
-    width: 200px;
+    width: 145px;
   }
 
   ul {
     display: flex;
-    gap: 30px;
+    gap: 20px;
   }
 
   li {
     text-transform: uppercase;
+    font-size: 12px;
   }
 
   a:hover,
