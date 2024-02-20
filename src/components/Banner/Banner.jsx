@@ -3,8 +3,8 @@ import "./banner.css";
 const Banner = ({ img, alt, }) => {
     return (
         <header>
-            <figure>
-                <img src={img} alt={alt} className="banner-img" />
+            <figure className="banner">
+                <img src={img} alt={alt}/>
                 <figcaption>Chez vous,<br />
                     partout et ailleurs </figcaption>
             </figure>

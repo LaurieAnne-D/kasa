@@ -1,8 +1,12 @@
 body {
-  margin: 20px;
+  margin: 0;
   font-family: "Montserrat", sans-serif;
-  color: white;
+  color: #ffffff;
   font-size: 1.1rem;
+}
+
+main {
+  margin: 20px;
 }
 
 ul {
