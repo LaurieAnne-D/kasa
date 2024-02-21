@@ -6,8 +6,8 @@ const Banner = ({ img, alt, }) => {
             <figure className="banner">
                 <img src={img} alt={alt} />
                 <figcaption>
-                    <p>Chez vous,<br />
-                        partout et ailleurs</p>
+                    <p>Chez vous,</p>
+                    <p>partout et ailleurs</p>
                 </figcaption>
             </figure>
         </header>

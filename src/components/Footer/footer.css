@@ -3,7 +3,8 @@ footer {
   display: flex;
   width: 100%;
   height: 209px;
-  background-color: #000;;
+  background-color: #000;
+  ;
 
   figure {
     display: flex;
@@ -14,7 +15,6 @@ footer {
     .logo {
       width: 122px;
       height: 40px;
-      fill: white;
     }
 
     figcaption {
@@ -26,6 +26,34 @@ footer {
 
       p {
         margin: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    justify-content: center;
+
+    figure {
+      gap: 30px;
+      padding-top: 70px;
+      padding-bottom: 20px;
+
+      .logo {
+        align-self: center;
+      }
+
+      figcaption {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        font-family: Montserrat;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 142.6%;
       }
     }
   }

@@ -15,7 +15,8 @@
 
   figcaption {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     position: absolute;
     width: 335px;
     height: 111px;
@@ -24,11 +25,60 @@
   }
 
   p {
-    margin-left: 16px;
+    margin: 0;
+    margin-left: 10px;
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
     line-height: 100%;
-    opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner {
+
+    img {
+      width: 100%;
+    }
+
+    figcaption {
+      flex-direction: row;
+      align-items: center;
+      width: calc(100% - 40px);
+    }
+
+    p {
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 142.6%;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .banner {
+    margin-top: 47px;
+    margin-bottom: 47px;
+
+    img {
+      height: 223px;
+      border-radius: 25px;
+    }
+
+    figcaption {
+      width: calc(100% - 200px);
+      height: 223px;
+      border-radius: 25px;
+
+      p {
+        font-size: 48px;
+
+        br {
+          margin-left: 5px;
+          display: none;
+        }
+      }
+    }
   }
 }

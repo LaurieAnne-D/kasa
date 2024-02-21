@@ -1,6 +1,7 @@
 article {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
 
   .card-link {
@@ -38,5 +39,54 @@ article {
       }
     }
 
+  }
+}
+
+@media (min-width: 768px) {
+  article {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px;
+    border-radius: 25px;
+    background: #F6F6F6;
+    margin-top: 30px;
+    gap: 40px;
+
+    .card-link {
+      .card {
+        img {
+          width: 300px;
+          height: 220px;
+        }
+
+        figcaption {
+          width: 300px;
+          height: 220px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+
+  article {
+    padding: 60px;
+    gap: 50px;
+
+    .card-link {
+      .card {
+        img {
+          width: 340px;
+          height: 340px;
+        }
+
+        figcaption {
+          width: 340px;
+          height: 340px;
+        }
+      }
+    }
   }
 }

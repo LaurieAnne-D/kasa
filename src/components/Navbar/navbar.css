@@ -27,8 +27,21 @@ nav {
 
 @media (min-width: 768px) {
   nav {
+
+    li {
+        font-size: 16px;
+        font-weight: 500;
+      }
+  }
+}
+
+@media (min-width: 1025px) {
+  nav {
+    margin: 50px 100px;
+
     li {
       text-transform: capitalize;
+      font-size: 24px;
     }
   }
 }
