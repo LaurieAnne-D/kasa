@@ -1,14 +1,42 @@
-.card-link {
-  color: brown;
+article {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 
-  .card {
-    display: flex;
-    flex-direction: column;
-    width: 335px;
-    height: 255px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(10, 10, 10, 0.00) 42%, rgba(4, 4, 4, 0.20) 99.99%, rgba(0, 0, 0, 0.50) 100%);
+  .card-link {
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      border-radius: 10px;
+
+      img {
+        width: 335px;
+        height: 255px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      figcaption {
+        display: flex;
+        align-items: flex-end;
+        position: absolute;
+        width: 335px;
+        height: 255px;
+        border-radius: 10px;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(10, 10, 10, 0.00) 42%, rgba(4, 4, 4, 0.20) 99.99%, rgba(0, 0, 0, 0.50) 100%);
+
+        h3 {
+          width: 250px;
+          height: fit-content;
+          margin-left: 20px;
+          color: #FFFFFF;
+          font-size: 18px;
+          line-height: 142.6%;
+        }
+      }
+    }
+
   }
-
 }

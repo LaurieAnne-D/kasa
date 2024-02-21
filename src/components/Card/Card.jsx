@@ -20,7 +20,7 @@ function Card({ title, cover }) {
 
 function CardContainer() {
     return (
-        <React.Fragment>
+        <article>
             {logements.map(logement => (
                 <Card
                     key={logement.id}
@@ -28,7 +28,7 @@ function CardContainer() {
                     cover={logement.cover}
                 />
             ))}
-        </React.Fragment>
+        </article>
     );
 }
 
