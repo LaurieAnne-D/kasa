@@ -1,6 +1,33 @@
 .collapse {
     display: flex;
-    flex-direction: row-reverse;
-    background-color: #FF6060;
+    flex-direction: column;
 
+    div {
+        display: flex;
+        justify-content: space-between;
+        width: calc(100% - 10px);
+        height: 30px;
+        padding: 10px 0px 10px 10px;
+        align-items: center;
+        background-color: #FF6060;
+        border-radius: 5px;
+
+        h3 {
+            font-size: 13px;
+            font-weight: 700;
+            line-height: 142.6%;
+        }
+
+        img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    p {
+        align-self: center;
+        width: calc(100% - 40px);
+        font-size: 12px;
+        color: #000000;
+    }
 }

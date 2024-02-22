@@ -1,13 +1,13 @@
 import "./banner.css";
 
-const Banner = ({ img, alt, }) => {
+const Banner = ({ img, alt, txtAbout }) => {
     return (
         <header>
             <figure className="banner">
                 <img src={img} alt={alt} />
                 <figcaption>
-                    <p>Chez vous,</p>
-                    <p>partout et ailleurs</p>
+                    <p className={`banner-txt ${txtAbout}`}>Chez vous,</p>
+                    <p className={`banner-txt ${txtAbout}`}>partout et ailleurs</p>
                 </figcaption>
             </figure>
         </header>

@@ -8,7 +8,7 @@ import "./about.css";
 const informations = informationsData;
 function CollapseContainer() {
     return (
-        <ul>
+        <ul className="collapse-container">
             {informations.map(information => (
                 <Collapse
                     key={information.title}
@@ -20,10 +20,10 @@ function CollapseContainer() {
     );
 }
 
-function About () {
+function About() {
     return (
         <main>
-            <Banner
+            <Banner txtAbout="text-about"
                 img={aboutImg}
             />
             <CollapseContainer />
