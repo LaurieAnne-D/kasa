@@ -1,33 +1,46 @@
 .collapse {
     display: flex;
     flex-direction: column;
+}
 
-    div {
-        display: flex;
-        justify-content: space-between;
-        width: calc(100% - 10px);
-        height: 30px;
-        padding: 10px 0px 10px 10px;
-        align-items: center;
-        background-color: #FF6060;
-        border-radius: 5px;
+.collapse div {
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+    padding: 10px 20px 10px 15px;
+    align-items: center;
+    background-color: #FF6060;
+    border-radius: 5px;
+}
 
-        h3 {
-            font-size: 13px;
-            font-weight: 700;
-            line-height: 142.6%;
-        }
+.collapse div h3 {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 142.6%;
+}
 
-        img {
-            width: 32px;
-            height: 32px;
-        }
-    }
+.collapse div img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.4s ease;
+}
 
-    p {
-        align-self: center;
-        width: calc(100% - 40px);
-        font-size: 12px;
-        color: #000000;
-    }
+.collapse div img.rotate {
+    transform: rotate(180deg);
+}
+
+.collapse p {
+    align-self: center;
+    width: calc(100% - 40px);
+    font-size: 12px;
+    color: #000000;
+    background-color: rgba(246, 246, 246, 0.45);
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: all 0.8s ease 0.3s;
+}
+
+.collapse.open p {
+    transform: scaleY(1);
+
 }
