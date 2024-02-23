@@ -1,9 +1,12 @@
 .collapse-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    width: 100%;
+    gap: 20px;
 }
 
-.banner-about {
-    display: none;
+@media (min-width: 1025px) {
+    .collapse-container {
+        width: 82.5%;
+    }
 }

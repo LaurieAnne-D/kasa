@@ -5,15 +5,17 @@ article {
   gap: 20px;
 
   .card-link {
+    width: 100%;
 
     .card {
       display: flex;
       flex-direction: column;
       flex-shrink: 0;
       border-radius: 10px;
+      position: relative;
 
       img {
-        width: 335px;
+        width: 100%;
         height: 255px;
         object-fit: cover;
         border-radius: 10px;
@@ -23,10 +25,9 @@ article {
         display: flex;
         align-items: flex-end;
         position: absolute;
-        width: 335px;
+        width: fit-content;
         height: 255px;
-        border-radius: 10px;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(10, 10, 10, 0.00) 42%, rgba(4, 4, 4, 0.20) 99.99%, rgba(0, 0, 0, 0.50) 100%);
+        
 
         h3 {
           width: 250px;
@@ -37,6 +38,17 @@ article {
           line-height: 142.6%;
         }
       }
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(10, 10, 10, 0.00) 42%, rgba(4, 4, 4, 0.20) 99.99%, rgba(0, 0, 0, 0.50) 100%);
+      border-radius: 10px;
     }
 
   }
@@ -54,15 +66,15 @@ article {
     gap: 40px;
 
     .card-link {
+      width: 100%;
+
       .card {
         img {
-          width: 300px;
-          height: 220px;
+          height: 340px;
         }
 
         figcaption {
-          width: 300px;
-          height: 220px;
+          height: 340px;
         }
       }
     }
@@ -70,23 +82,38 @@ article {
 }
 
 @media (min-width: 1025px) {
-
   article {
     padding: 60px;
-    gap: 50px;
+    align-items: flex-start;
+    gap: 40px;
 
     .card-link {
-      .card {
-        img {
-          width: 340px;
-          height: 340px;
-        }
+      width: calc((100% - 80px) / 2);
+      padding: 0;
+    }
 
-        figcaption {
-          width: 340px;
-          height: 340px;
-        }
-      }
+    .card {
+      width: 100%;
+      margin-bottom: 40px;
+      margin-right: 0;
+    }
+  }
+}
+
+@media (min-width: 1300px) {
+  article {
+    padding: 60px;
+    align-items: flex-start;
+    gap: 40px;
+
+    .card-link {
+      width: calc((100% - 80px) / 3);
+      padding: 0;
+    }
+
+    .card {
+      margin-bottom: 40px;
+      margin-right: 40px;
     }
   }
 }
