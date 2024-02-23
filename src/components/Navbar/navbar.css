@@ -37,7 +37,7 @@ nav {
 
 @media (min-width: 1200px) {
   nav {
-    margin: 50px 100px;
+    margin: 45px 100px;
 
     li {
       text-transform: capitalize;
