@@ -2,7 +2,7 @@ import React from 'react';
 import './home.css';
 import Banner from '../../components/Banner/Banner';
 import homeImg from '../../assets/images/home.png';
-import Card from '../../components/Card/Card';
+import Cards from '../../components/Cards/Cards';
 
 function Home() {
     return (
@@ -10,7 +10,7 @@ function Home() {
             <Banner
                 img={homeImg}
             />
-            <Card />
+            <Cards />
         </main>
     )
 }
