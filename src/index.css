@@ -37,7 +37,7 @@ figcaption {
   max-width: 100%;
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1200px) {
   main {
     margin:50px 100px;
   }
