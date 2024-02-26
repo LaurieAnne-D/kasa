@@ -1,18 +1,10 @@
 import React, { useState } from "react";
-import data from "../../data/logements.json";
 import arrowLeft from "../../assets/icons/arrowLeft.svg";
 import arrowRight from "../../assets/icons/arrowRight.svg";
 import "./carousel.css";
 
-const Carousel = ({ logementId }) => {
+const Carousel = ({ pictures, title }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
-
-    const logement = data.find(item => item.id === logementId);
-    if (!logement) {
-        return <div>No logement found for the provided ID</div>;
-    }
-
-    const { pictures, title, } = logement;
 
     const nextSlide = () => {
         setCurrentSlide((currentSlide + 1) % pictures.length);
