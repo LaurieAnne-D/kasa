@@ -15,11 +15,23 @@ export default function Rental() {
         return <div>No logement found for the provided ID</div>;
     }
 
-    const { pictures, title, tags } = logement;
+    const { pictures, title, tags, rating } = logement;
 
     const collapseItems = [
         { title: 'Description', content: logement.description },
         { title: 'Équipements', content: logement.equipments },]
+    
+    const renderStars = (rating) => {
+        const stars = [];
+        for (let i = 1; i <= 5; i++) {
+            if (i <= rating) {
+                stars.push(<img key={i} src={redStar} alt="red star" />);
+            } else {
+                stars.push(<img key={i} src={greyStar} alt="grey star" />);
+            }
+        }
+        return stars;
+    };
 
     return (
         <main>
@@ -36,8 +48,7 @@ export default function Rental() {
                     </figcaption>
                 </figure>
                 <figure>
-                    <img src={redStar} alt="" />
-                    <img src={greyStar} alt="" />
+                    {renderStars(rating)}
                 </figure>
                 <Tags tags={tags} />
             </section>
