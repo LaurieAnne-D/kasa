@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 const logements = data;
 
-function Card({ title, cover }) {
+function Card({id, title, cover }) {
     return (
-        <Link to="/" className="card-link">
+        <Link to={`/rental/${id}`} className="card-link">
             <figure className="card">
                 <img src={cover} alt={title} />
                 <figcaption>
@@ -24,6 +24,7 @@ function CardContainer() {
             {logements.map(logement => (
                 <Card
                     key={logement.id}
+                    id={logement.id}
                     title={logement.title}
                     cover={logement.cover}
                 />
