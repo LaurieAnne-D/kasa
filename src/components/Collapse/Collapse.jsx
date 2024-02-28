@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './collapse.css';
 import arrowUp from '../../assets/icons/arrowUp.svg';
+import arrowDown from '../../assets/icons/arrowDown.svg';
 
 const Collapse = ({ title, content }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ const Collapse = ({ title, content }) => {
         <li className={`collapse ${isOpen ? 'open' : ''}`} onClick={toggleState}>
             <div>
                 <h3>{title}</h3>
-                <img src={arrowUp} alt={title} className={isOpen ? 'rotate' : ''} />
+                <img src={isOpen ? arrowDown : arrowUp} alt={title} className={isOpen ? 'rotate' : ''} />
             </div>
             {isOpen && <p>{content}</p>}
         </li>

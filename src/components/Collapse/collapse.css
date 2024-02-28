@@ -22,11 +22,6 @@
 .collapse div img {
     width: 32px;
     height: 32px;
-    transition: transform 0.4s ease;
-}
-
-.collapse div img.rotate {
-    transform: rotate(180deg);
 }
 
 .collapse p {
@@ -35,14 +30,6 @@
     font-size: 12px;
     color: #000000;
     background-color: rgba(246, 246, 246, 0.45);
-    transform-origin: top;
-    transform: scaleY(0);
-}
-
-.collapse.open p {
-    transition: all 0.8s ease 0.3s;
-    transform: scaleY(1);
-
 }
 
 @media (min-width: 768px) {
