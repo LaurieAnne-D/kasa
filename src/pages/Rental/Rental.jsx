@@ -1,4 +1,3 @@
-// Rental.js
 import React from 'react';
 import data from "../../data/logements.json";
 import Carousel from "../../components/Carousel/Carousel";
@@ -7,7 +6,7 @@ import redStar from "../../assets/icons/redStar.svg";
 import greyStar from "../../assets/icons/greyStar.svg";
 import Collapse from "../../components/Collapse/Collapse";
 import { useParams } from "react-router-dom";
-
+import "./rental.css";
 export default function Rental() {
     const { id } = useParams();
     const logement = data.find(item => item.id === id);
@@ -20,7 +19,7 @@ export default function Rental() {
     const collapseItems = [
         { title: 'Description', content: logement.description },
         { title: 'Équipements', content: logement.equipments },]
-    
+
     const renderStars = (rating) => {
         const stars = [];
         for (let i = 1; i <= 5; i++) {
@@ -34,24 +33,31 @@ export default function Rental() {
     };
 
     return (
-        <main>
-            <header>
+        <main className="rental">
+            <header className="rental-header">
                 <Carousel pictures={pictures} title={title} />
-                <h1>{title}</h1>
-                <p className="location">{logement.location}</p>
+
+                <div className="direction">
+                <section>
+                    <h1>{title}</h1>
+                    <p className="location">{logement.location}</p>
+                    <Tags tags={tags}/>
+                </section>
+
+                <section className="host">
+                    <figure className='stars'>
+                        {renderStars(rating)}
+                    </figure>
+                    <figure>
+                        <figcaption>
+                            {logement.host.name}
+                        </figcaption>
+                        <img src={logement.host.picture} alt={logement.host.name} />
+                    </figure>
+                    </section>
+                </div>
             </header>
-            <section className="host">
-                <figure> 
-                    <img src={logement.host.picture} alt={logement.host.name} />
-                    <figcaption>
-                        <p>{logement.host.name}</p>
-                    </figcaption>
-                </figure>
-                <figure>
-                    {renderStars(rating)}
-                </figure>
-                <Tags tags={tags} />
-            </section>
+
             <section className='description'>
                 <ul className="collapse-list">
                     {collapseItems.map((item, index) => (

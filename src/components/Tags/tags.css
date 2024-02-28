@@ -1,6 +1,6 @@
 .tags {
 	display: flex;
-	justify-content: center;
+	flex-wrap: wrap;
 	gap: 10px;
 
 	li {
@@ -27,12 +27,19 @@
 @media (min-width: 768px) {
 	.tags {
 		li {
-			border: 1px solid #000;
-
+			
 			p {
 				font-size: 14px;
 				border-radius: 10px;
 			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.tags {
+		li {
+			border: 1px solid #000;
 		}
 	}
 }

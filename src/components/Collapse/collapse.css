@@ -6,8 +6,8 @@
 .collapse div {
     display: flex;
     justify-content: space-between;
-    height: 30px;
-    padding: 10px 20px 10px 15px;
+    height: 10px;
+    padding: 10px;
     align-items: center;
     background-color: #FF6060;
     border-radius: 5px;
@@ -43,4 +43,11 @@
     transition: all 0.8s ease 0.3s;
     transform: scaleY(1);
 
+}
+
+@media (min-width: 768px) {
+    .collapse div {
+            height: 30px;
+            padding: 10px 20px 10px 15px;
+        }
 }
