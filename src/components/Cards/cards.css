@@ -34,7 +34,8 @@ article {
           height: fit-content;
           margin-left: 20px;
           color: #FFFFFF;
-          font-size: 18px;
+          font-size: 1rem;
+          font-weight: 600;
           line-height: 142.6%;
         }
       }
@@ -66,7 +67,7 @@ article {
     gap: 40px;
 
     .card-link {
-      width: calc((100% - 80px) / 2);
+      width: calc((100% - 60px) / 2);
       padding: 0;
       height: 340px;
 
@@ -87,10 +88,10 @@ article {
   article {
     padding: 60px;
     align-items: flex-start;
-    gap: 40px;
+    gap: 60px;
 
     .card-link {
-      width: calc((100% - 80px) / 3);
+      width: calc((100% - 120px) / 3);
     }
 
     .card {

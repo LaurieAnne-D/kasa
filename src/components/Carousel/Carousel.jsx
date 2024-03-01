@@ -17,11 +17,11 @@ const Carousel = ({ pictures, title }) => {
     return (
         <figure className="carousel">
             <img className="slide" src={pictures[currentSlide]} alt={title} />
-            <figcaption>
+            {pictures.length > 1 && <figcaption  >
                 <img className="left" src={arrowLeft} alt="fleche gauche" onClick={prevSlide} />
-                {pictures.length > 1 && <p className="counter">{currentSlide + 1}/{pictures.length}</p>}
+                <p className="counter">{currentSlide + 1}/{pictures.length}</p>
                 <img className="right" src={arrowRight} alt="fleche droite" onClick={nextSlide} />
-            </figcaption>
+            </figcaption>}
         </figure>
     );
 };
