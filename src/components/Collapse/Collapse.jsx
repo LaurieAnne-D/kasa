@@ -11,12 +11,22 @@ const Collapse = ({ title, content }) => {
     };
 
     return (
-        <li className={`collapse ${isOpen ? 'open' : ''}`} onClick={toggleState}>
+        <li className={`collapse ${isOpen ? 'open' : ''} ${title === 'Équipements' ? 'listcolumn' : ''}`} onClick={toggleState}>
             <div>
                 <h3>{title}</h3>
                 <img src={isOpen ? arrowDown : arrowUp} alt={title} className={isOpen ? 'rotate' : ''} />
             </div>
-            {isOpen && <p>{content}</p>}
+            {isOpen && (
+                <>
+                    {title !== 'Équipements' ? <p>{content}</p> : (
+                        <ul>
+                            {content.map((item, index) => (
+                                <li key={index}>{item}</li>
+                            ))}
+                        </ul>
+                    )}
+                </>
+            )}
         </li>
     );
 };

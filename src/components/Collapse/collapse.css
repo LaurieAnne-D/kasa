@@ -32,9 +32,30 @@
     background-color: rgba(246, 246, 246, 0.45);
 }
 
+.rental .description .listcolumn ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin: 12px 20px;
+    background-color: rgba(246, 246, 246, 0.45);
+}
+
+.listcolumn ul li {
+    color: #000;
+    font-size: 12px;
+}
+
 @media (min-width: 768px) {
     .collapse div {
-            height: 30px;
-            padding: 10px 20px 10px 15px;
-        }
+        height: 30px;
+        padding: 10px 20px 10px 15px;
+    }
+
+    .collapse p {
+        font-size: 18px;
+    }
+
+    .listcolumn ul li {
+        font-size: 18px;
+    }
 }
